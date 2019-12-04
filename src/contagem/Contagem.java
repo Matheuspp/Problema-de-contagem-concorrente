@@ -18,13 +18,15 @@ public class Contagem {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         int num_linhas = 0;
         int num_linhas_bloco;
+        String caminho_atualiza = "C:\\Users\\Matheus VR\\Documents\\NetBeansProjects\\contagem\\src\\contagem\\atualizarValores.txt";
+        String caminho_diminui;
         
         // TODO code application logic here
         
         // ====================================================================================================================
         // lendo arquivo e contando numero de linhas
         File file; 
-        file = new File("C:\\Users\\Matheus VR\\Documents\\NetBeansProjects\\contagem\\src\\contagem\\atualizarValores.txt");
+        file = new File(caminho_atualiza);
   
         BufferedReader br = new BufferedReader(new FileReader(file)); 
 
@@ -39,7 +41,13 @@ public class Contagem {
         num_linhas_bloco = num_linhas / 10; // linhas por bloco
         int arr[];
         Monitor novo = new Monitor();
-        arr = novo.somar(num_linhas_bloco, 1);
+        
+        
+        
+        // ===================================================================================================================
+        // threads
+        
+        arr = novo.somar(num_linhas_bloco, 1, caminho_atualiza);
         for(int i = 0;i < 3;i++){
             System.out.println(arr[i]);
         }
