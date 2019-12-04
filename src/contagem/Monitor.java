@@ -17,42 +17,13 @@ import java.util.Arrays;
  * @author Matheus VR
  */
 public class Monitor {
-    private int somaV;
-    private int somaL;
-    private int somaD;
-    private int index;
-    private int tamanho_bloco;
-
-    
-    
+     
     public Monitor(){
        
     }
 
-    public int getSomaV() {
-        return somaV;
-    }
-
-    public void setSomaV(int somaV) {
-        this.somaV = somaV;
-    }
-
-    public int getSomaL() {
-        return somaL;
-    }
-
-    public void setSomaL(int somaL) {
-        this.somaL = somaL;
-    }
-
-    public int getSomaD() {
-        return somaD;
-    }
-
-    public void setSomaD(int somaD) {
-        this.somaD = somaD;
-    }
-    public int[] somar(int tamanho_bloco, int index) throws FileNotFoundException, IOException{
+    
+    public int[] somar(int tamanho_bloco, int index, String caminho) throws FileNotFoundException, IOException{
         int conta_linhas = 0;
         int cont_aux = 0;
         int somas[];
@@ -64,7 +35,7 @@ public class Monitor {
         // ====================================================================================================================
         // lendo arquivo e contando numero de linhas
         File file; 
-        file = new File("C:\\Users\\Matheus VR\\Documents\\NetBeansProjects\\contagem\\src\\contagem\\atualizarValores.txt");
+        file = new File(caminho);
   
         BufferedReader br = new BufferedReader(new FileReader(file)); 
 
