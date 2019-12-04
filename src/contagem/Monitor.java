@@ -16,7 +16,7 @@ import java.util.Arrays;
  *
  * @author Matheus VR
  */
-public class Monitor {
+public class Monitor extends Thread{
      
     public Monitor(){
        
@@ -24,6 +24,7 @@ public class Monitor {
 
     
     public int[] somar(int tamanho_bloco, int index, String caminho) throws FileNotFoundException, IOException{
+        
         int conta_linhas = 0;
         int cont_aux = 0;
         int somas[];

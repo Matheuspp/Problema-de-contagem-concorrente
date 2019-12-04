@@ -39,22 +39,47 @@ public class Contagem {
         //=====================================================================================================================
         
         num_linhas_bloco = num_linhas / 10; // linhas por bloco
-        int arr[];
-        int arr2[];
-        Monitor novo = new Monitor();
         
+        // thread 1
+        Thread t1 = new Thread(new Arquivo(num_linhas_bloco, 1));
+        t1.start();
+        /*
+        // thread 2
+        Thread t2 = new Thread(new Arquivo(num_linhas_bloco, (1*num_linhas_bloco)));
+        t2.start();
         
+        // thread 3
+        Thread t3 = new Thread(new Arquivo(num_linhas_bloco, (2*num_linhas_bloco)));
+        t3.start();
         
-        // ===================================================================================================================
-        // threads
+        // thread 4
+        Thread t4 = new Thread(new Arquivo(num_linhas_bloco, (3*num_linhas_bloco)));
+        t4.start();
         
-        arr = novo.somar(num_linhas_bloco, 1, caminho_atualiza);
-        arr2 = novo.somar(num_linhas_bloco, 1, caminho_diminui);
-        for(int i = 0;i < 3;i++){
-            arr[i] -= arr2[i];
-            System.out.println(arr[i]);
-           
-        }
+        // thread 5
+        Thread t5 = new Thread(new Arquivo(num_linhas_bloco, (4*num_linhas_bloco)));
+        t5.start();
+                
+        // thread 6
+        Thread t6 = new Thread(new Arquivo(num_linhas_bloco, (5*num_linhas_bloco)));
+        t6.start();
+        
+        // thread 7
+        Thread t7 = new Thread(new Arquivo(num_linhas_bloco, (6*num_linhas_bloco)));
+        t7.start();
+        
+        // thread 8
+        Thread t8 = new Thread(new Arquivo(num_linhas_bloco, (7*num_linhas_bloco)));
+        t8.start();
+        
+        // thread 9
+        Thread t9 = new Thread(new Arquivo(num_linhas_bloco, (8*num_linhas_bloco)));
+        t9.start();
+        
+        // thread 10
+        Thread t10 = new Thread(new Arquivo(num_linhas_bloco, (9*num_linhas_bloco)));
+        t10.start();
+        */
         
             
          
